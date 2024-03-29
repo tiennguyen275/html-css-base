@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+        <!-- <base href="https://github.com/tiennguyen275" target="_blank"/> -->
+        <meta name="keywords" content="HTML, CSS, JavaScript, Trungquandev">
+        <meta name="description" content="My Web Tutorials">
+        <meta name="author" content="DevWebsite">
+        <!-- <meta http-equiv="refresh" content="5"> -->
+
+        <title>Đây là tiêu đề của 1 trang web</title>
+
+        <style>
+            .table-lesson-14 {
+              width: 70%;
+              border-collapse: collapse;
+            }
+            td, th {
+              border: 1px solid #dddddd;
+              padding: 15px; /*top left bottom right*/
+            }
+            th {
+                text-align: center;
+            }
+            /*odd- Hàng lẻ: 1-3-5-7-9*/
+            tr:nth-child(odd) {
+                background-color: yellowgreen;
+            }
+            /*even- Hàng chẵn: 2-4-6-8-10*/
+            tr:nth-child(even) {
+                background-color: goldenrod;
+            }
+
+            /*Button for iframe*/
+            .button-iframe{
+                font-size: 20px;
+                background-color: #a29bfe;
+                cursor: pointer;
+                border: none;
+                border-radius: 10px;
+                outline: none;
+            }
+            .button-iframe:hover{
+                background-color: #493dee;
+            }
+            .button-iframe:active{
+                background-color: #ff0000;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+
+            /* Lesson 20 style */
+            .class-20{
+                color: lightseagreen;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            #id-content-1{
+                color:lightskyblue
+            }
+            #id-content-2{
+                color:lightslategray
+            }
+            #reactif{
+                width: 500px;
+                height: 300px;
+                border: none;
+            }
+            
+            .lesson-25{
+                font-size: 2em;
+                font-weight: bold;
+            }
+            @media screen and (max-width: 700px){
+                .lesson-25{
+                    font-size: 1em;
+                    font-weight: normal;
+                    color: #78e08f;
+                }
+            }
+            </style>
+        <link rel="stylesheet" href="lesson23.css">
+        <script src="lesson22.js" async></script>
+                
+    </head>
+    <body>
+    <mark>Lesson 29 - HTML Multimedia (Video - Audio - Youtube)</mark><br><br>
+    <iframe width="500" height="300"
+    src="https://www.youtube.com/embed/noqnAtXbrcI?si=zftp0JDqbHBMO0UF" 
+    title="HTML/CSS Base" 
+    frameborder="0" 
+    allow="muted; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br><br>
+
+    <audio controls autoplay muted loop>
+        <source src="audios/Invisible Beauty - Aakash Gandhi.mp3" type="audio/mpeg">
+        Trình duyệt của bạn không hỗ trợ tệp âm thanh!
+    </audio><br>
+
+    <video width="320" height="240" controls autoplay muted playsinline loop>
+        <source src="videos/coffee-video.mp4" type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ hiển thị video!
+    </video>
+     
+
+    <hr>
+
+    <mark>Lesson 28 - HTML Emojis</mark><br>
+    <div>☕(&#9749;) ⏰(&#9200;) ✅(&#9989;) 🌏(&#127759;) 🌸(&#127800;)
+    </div>
+
+    <hr>
+
+    <mark>Lesson 27 - HTML Entities &amp; Symbols</mark><br>
+    <div>♥(&#9829; &hearts;) ♦(&#9830; &diams;) ♣(&#9827; &clubs;) ♠(&#9824; &spades;)
+    </div>
+    <hr>
+
+    <mark>Lesson 26 - HTML Semantic Elements</mark><br>
+    <div>Nội dung bài 26 chủ yếu là lý thuyết</div>
+    
+    <hr>
+
+    <mark>Lesson 25 - HTML Responsive</mark><br>   
+    <div class="lesson-25">
+        Đây là nội dung bài 25.
+    </div>
+
+    <hr>
+
+    <mark>Lesson 24 - HTML Meta</mark><br>
+    <p class="lesoon-24">Nội dung bài 24 nằm ở phần thẻ &lt;head&gt; phía bên trên.</p>
+    
+    <hr>
+
+    <mark>Lesson 23 - HTML Head</mark><br>
+    <p class="lesson-23">Nội dung bài 23 nằm ở phần thẻ &lt;head&gt; phía bên trên.</p>
+
+    <hr>
+    
+    <mark>Lesson 22 - HTML JavaScript</mark><br>
+    <p>Cách 1: Sử dụng JS trực tiếp trong thẻ HTML:</p>
+    <button type="button" 
+    onclick="alert('Notification Popups!')">
+    Show Alert
+    </button>
+
+    <p>Cách 2: Sử dụng JS trong cặp thẻ &lt;script&gt;</p>
+    <p><strong id="lesson-22-js-step2"></strong></p>
+    <script>
+        document.getElementById("lesson-22-js-step2").innerHTML = "Insert Text: Nothing in here.";
+    </script>
+
+    <p>Cách 3: sử dụng JS trong một file riêng và nhúng vào trang HTML:</p>
+    <p><strong id="lesson-22-js-step3"></strong></p>
+    <em>Thẻ script cách 3 đã được để trên thẻ Head với khai báo thuộc tính async</em>
+    <hr>
+
+    <mark>Lesson 21 - HTML Iframe</mark><br>
+    <iframe src="https://react.dev"
+    name= "iframe_1_react"
+    title="About React" 
+    id="reactif">
+    </iframe><br>
+
+    <a href="https://react.dev/learn" 
+    target="iframe_1_react">
+    <button class="button-iframe">
+    React Docs</button>
+    </a>
+    <button class="button-iframe" onclick="goBack()">Go Back</button>
+    <script>
+        function goBack(){
+            window.history.back();
+        }
+    </script>
+
+    <hr>
+
+    <mark>Lesson 20 - Classn &amp; Id</mark><br>
+    <div class="class-20">Content Class 01</div>
+    <div class="class-20">Content Class 02</div>
+    <div class="class-20">Content Class 03</div>
+
+    <div id="id-content-1">Content Id 01</div>
+    <div id="id-content-2">Content Id 02</div>
+
+    <hr>
+    
+    <mark>Lesson 19 - HTML Block &amp; InLine</mark><br>
+    <div>Block 01</div>
+    <div>Block 02</div>
+    <p>Block 03 <strong>Inline 01</strong></p>
+
+    <span>Inline 01</span>
+    <span>Inline 02</span>
+    <code>Inline 03</code>
+
+    <hr>
+
+    <mark>Lesson 18 - Tạo kiểu cho danh sách</mark>
+    <mark>Lesson 17 - List &amp; Nested List </mark>
+    <h3>Danh sách không sắp xếp:</h3>
+    <ul style="list-style-type:  none;">
+        <li>
+            Coffee
+            <ul style="list-style-type: circle;">
+                <li>
+                    Black
+                    <ul style="list-style-type: none;">
+                        <li>Milk</li>
+                        <li>Pure</li>
+                    </ul>
+                </li>
+                <li>Capuchino</li>
+                <li>Americano</li>
+            </ul>
+        </li>
+        <li>Tea</li>
+        <li>Water</li>
+    </ul>
+    
+    <h3>Danh sách có sắp xếp:</h3>
+    <ol type="1" start="5">
+        <li>
+            Coffee
+            <ol type="1">
+                <li>Black</li>
+                <li>Capuchino</li>
+                <li>Americano</li>
+            </ol>
+        </li>
+        <li>Tea</li>
+        <li>Water</li>
+    </ol>
+
+    <h3>Danh sách dạng mô tả - Description List:</h3>
+    <dl>
+        <dt>Coffee</dt>
+        <dd>- Pure black</dd>
+        <dd>- Capuchino</dd>
+        <dd>- Americano</dd> 
+
+        <dt>Tea</dt>
+        <dd>- Shan Tuyet</dd>
+
+        <dt>Water</dt>
+        <dd>- Ice</dd>
+        <dd>- Warm</dd>
+      </dl>     
+    
+    <hr>
+    
+    <mark>Lesson 16 - Table Colgroup</mark>
+    <table width="100%">
+        <colgroup>
+          <col span="2" style="background-color: pink">
+          <col span="1" style="background-color: lightgreen">
+          <col span="2" style="background-color: yellowgreen">
+          <col span="1" style="background-color: lightcoral">
+        </colgroup>
+        <tr style="text-align: left;">
+          <th>MON</th>
+          <th>TUE</th>
+          <th>WED</th>
+          <th>THU</th>
+          <th>FRI</th>
+          <th>SAT</th>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+        </tr>
+   </table>
+
+    <hr>
+    
+    <mark>Lesson 15 - Tables Colspan &amp; Rowspan</mark><br>
+    <h3>Table để test <mark style="background-color:darkturquoise;">Rowspan</mark></h3>
+    <table>
+        <tr>
+            <th>Name</th>
+            <td>Scam</td>
+            <td>Bomb</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Email</th>
+            <td>scammer@gmail.com</td>
+            <td>bomber@gmail.com</td>
+        </tr>
+        <tr>
+            <td>scammer2@gmail.com</td>
+            <td>bomber2@gmail.com</td>
+        </tr>
+    </table>
+
+    <h3>Table để test <mark style="background-color:darkturquoise;">Colspan</mark></h3>
+    <table>
+        <tr>
+            <th colspan="2">Name (FirstName &amp; LastName)</th>
+            <th>Email</th>
+            <th>Youtube</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Smith</td>
+            <td>abcxyz@gmail.com</td>
+            <td>My Website</td>
+        </tr>
+        <tr>
+            <td>Tom</td>
+            <td>Holland</td>
+            <td>none@gmai.com</td>
+            <td>My Website</td>
+        </tr>
+    </table>
+
+    <h3>Table theo chiều ngang</h3>
+    <table class="table-lesson-15">
+        <tr>
+            <th>Name</th>
+            <td>Website</td>
+            <td>Bomb</td>
+            <td>Effect</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>websiteofficial@gmail.com</td>
+            <td>bomber@gmail.com</td>
+            <td>effect@gmail.com</td>
+        </tr>
+        <tr>
+            <th>Youtube</th>
+            <td>My Website</td>
+            <td>My Bomb</td>
+            <td>My Effect</td>
+        </tr>
+    </table>
+       
+    <hr>
+
+    <mark>Lesson 14 - Tables</mark><br>
+    <h3>Table theo chiều dọc</h3>
+
+    <table class="table-lesson-14">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Youtube</th>
+        </tr>
+        <tr>
+            <td>Website</td>
+            <td>websiteofficial@gmail.com</td>
+            <td>My Website</td>
+        </tr>
+        <tr>
+            <td>Website</td>
+            <td>websiteofficial@gmail.com</td>
+            <td>My Website</td>
+        </tr>
+        <tr>
+            <td>Bomb</td>
+            <td>bomber@gmail.com</td>
+            <td>My Bomb</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <mark>Lesson 13 - Favicon</mark><br>
+    <p>Nội dung bài này nằm trong thẻ head</p>
+        
+    <hr>
+        
+    <mark>Lesson 12 - Picture Elements</mark><br>
+    <div>
+    <picture>
+        <source media="(min-width: 992px)" srcset="./images/trungquandev-mern-stack-reviews/4.png">
+        <source media="(min-width: 768px)" srcset="./images/trungquandev-mern-stack-reviews/3.png">
+        <source media="(min-width: 576px)" srcset="./images/trungquandev-mern-stack-reviews/2.png">
+        <img src="./images/trungquandev-mern-stack-reviews/1.png">
+    </picture>
+    </div>
+
+
+    <hr>
+
+    <mark>Lesson 11 - Background-Image</mark><br>
+    <p style="
+    padding-top: 30px;
+    text-align: center;
+    background-attachment: fixed;
+    /* background-repeat: no-repeat; */
+    background-size: contain;
+    background-image: url('./images/lesson-11-bg-img/autumn.jpg');">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        <br>
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+        It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+
+    <p style="
+    color:#a29bfe;
+    width: 150px;
+    height: 100px;
+    background-image: url('./images/lesson-11-bg-img/dot.jpg');">
+    Testing Background-Image
+    With Color
+    </p>
+     
+    <hr>
+
+    <mark>Lesson 10 - Image map</mark><br>
+    <!-- Để ảnh gốc không chỉnh sửa width với height sẽ đúng với tọa độ -->
+    <img src="images/lesson-10-img-map/01-original.jpeg" usemap="#my-img-map"
+    style="width: 400px; height: 200px;">
+    <map name="my-img-map">
+
+    <area shape="rect" 
+    coords="830,1766,1791,2126" 
+    title="Keyboard" 
+    href="./lesson-10-img-map-content/keyboard.html">
+
+    <area shape="circle" 
+    coords="1217,1527,121" 
+    title="Airpod" 
+    href="./lesson-10-img-map-content/airpod.html">
+    
+    <area shape="poly" 
+    coords="1910,1860,1907,2045,1944,2192,2046,2232,2143,2175,2146,2025,2106,1871,2024,1829" 
+    title="Mouse"
+    href="./lesson-10-img-map-content/mouse.html">
+    
+    <!-- Add more -->
+    <area shape="poly"
+    coords="188,124,2304,190,2147,1051,469,1027" 
+    target="_blank"
+    title="Monitor" 
+    href="./lesson-10-img-map-content/monitor.html" >
+    </map>
+
+    <hr>
+
+    <mark>Lesson 9</mark><br>
+    <div>
+        <img src="images/Untitled.png" alt="Ảnh lấy từ thu mục của dự án"
+        width="200" height="100">
+    </div>
+    <div>
+        <img src="http://surl.li/rwlyc" 
+        alt="Logo trang blog trungquandev.com"
+        style="width: 200px; height: 100px;"><br>
+    </div>
+
+    <hr>
+
+    <mark>Lesson 8</mark><br>
+    <!-- Relative URL -->
+    <a href="product.html">Trỏ tới một file product.html trong dự án</a><br>
+    <a href="courses/mern-stack.html">Trỏ tới file mern-stack.html trong thư mục courses</a><br>
+    <a href="mailto:tienmn2001@gmail.com">Tự động mở phần mềm gửi mail trên máy tính</a><br>
+    <button onclick="document.location='https://github.com/tiennguyen275'">(Button) Link to my Git</button><br>
+    <a href="https://github.com/tiennguyen275" title="My Git" target="_blank">My Link Github</a><br>
+    <!-- Book Marks -->
+    <a href="#Lesson_01">Trở về Lesson 1</a><br>
+    <a href="#Lesson_03">Trở về Lesson 3</a><br>
+
+    <hr>
+
+    <mark>Lesson 7</mark><br>
+    <a href="https://github.com/tiennguyen275">My github.</a><br>
+    <br>
+    <a href="https://github.com/tiennguyen275" target="_blank">
+        <img src="C:\Users\tienm\OneDrive\Pictures\gumball.jpeg" width="130" height="100">
+    </a><br>
+    <br>
+    <iframe src="./frames/frame_1.1.html"
+    width="300px" height="200px" id="frame-1" name="frame-1">
+    </iframe>
+    
+    <hr>
+
+    <mark>Lesson 6</mark><br>
+    <blockquote>Đoạn văn bản được trích dẫn từ nguồn khác</blockquote>
+    <q>Một trích dẫn ngắn, sẽ được đặt trong cặp nháy kép<br></q>
+    <abbr title="Việt Nam">VN (Định nghĩa các chữ / từ viết tắt)</abbr><br>
+    <address>Thông tin các loại địa chỉ như:<br> 
+        * Email: abcxyz@gmail.com<br>
+        * URL: file:///D:/html-css-base/index.html<br>
+        * Số điện thoại: 0123456789<br>
+        * Địa chỉ nhà/công ty…vv
+    </address>
+    <cite>Xác định tiêu đề của một tác phẩm sáng tạo như: tên sách, bài thơ, bài hát, bức tranh…vv</cite><br>
+    <bdo dir="rtl">Xác định hướng của văn bản</bdo>
+
+    <hr>
+
+    <mark>Lesson 5</mark><br>
+    <b>Bôi đậm đoạn văn bản bình thường<br></b>
+    <strong>Đánh dấu văn bản là quan trọng về mặt ngữ nghĩa, và nó cũng được bôi đậm<br></strong>
+    <i>In nghiêng đoạn văn bản bình thường<br></i>
+    <em>Nhấn mạnh đoạn văn bản về mặt ngữ nghĩa, và nó cũng được in nghiêng<br></em>
+    
+    <hr>    
+
+    <mark>Đánh dấu đoạn văn bản<br></mark>
+    <del>Đoạn văn bản được coi là bị xóa<br></del>
+    <u>Gạch chân đoạn văn bản<br></u>
+    <ins>Một phần đoạn văn bản được xem là đã chèn mới vào<br></ins>
+
+    <sub>Văn bản chỉ số dưới, thường kích thước của nó sẽ nhỏ hơn, hiển thị bên dưới dòng<br></sub>
+    <p>H<sub>2</sub>O</p>
+    
+    <sup>Văn bản chỉ số trên, kích thước vẫn nhỏ, nhưng hiển thị bên trên của một dòng<br></sup>
+    <p>x<sup>2</sup></p>
+   
+    <hr>
+
+    <mark>Lesson 4</mark><br>
+    <p style="color: green;">Đoạn văn bản 1</p>
+    <p style="background-color: Tomato; color:blue">Đoạn văn bản 2</p>
+    <p style="font-size: 20px;color:#a29bfe">Đoạn văn bản 3</p>
+    
+    <hr>
+
+    <mark id="Lesson_03">Lesson 3</mark><br>
+    <p>Đoạn văn bản thứ 1.<br> Đây là nội dung đã xuống dòng sau cái thẻ br.</p>
+    <p>Đoạn văn bản thứ 2</p>
+
+    <hr>
+
+    <mark id="Lesson_01">Lesson 1</mark><br>
+    <p>Đây là 1 đoạn văn bản</p>
+    <p>Cấu trúc cơ bản của 1 trang web là đây!</p>
+    <mark>Lesson 2</mark><br>
+    <h1>
+        Đây là nội dung thẻ h1
+        <small>Nội dung nhỏ hơn</small>
+    </h1>
+    <h2>Title 2 <small>Nội dung nhỏ hơn 2</small></h2>
+    <h3>Title 3 <small>Nội dung nhỏ hơn 3</small></h3>
+    <h4>Title 4 <small>Nội dung nhỏ hơn 4</small></h4> 
+    <h5>Title 5 <small>Nội dung nhỏ hơn 5</small></h5>
+    <h6>Title 6 <small>Nội dung nhỏ hơn 6</small></h6>
+    </body>
+    <script>
+        // DOM theo Class
+        const class20 = document.getElementsByClassName("class-20")
+        class20[0].style.color = "red"
+
+        // DOM theo Id
+        const idContent1 = document.getElementById("id-content-1")
+        const idContent2 = document.getElementById("id-content-2")
+        console.log(idContent1, idContent2)
+        idContent1.innerHTML = "Change content!"
+        idContent2.style.fontSize = '12px'
+        
+    </script>
+    </html>
